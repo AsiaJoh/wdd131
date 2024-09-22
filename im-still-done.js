@@ -4,4 +4,4 @@ let total = myApples + friendApples;
 
 document.getElementById("myAppleElement").textContent = myApples;
 document.getElementById("friendAppleElement").textContent = friendApples;
-document.getElementById("totalAppleElement").textContent = totalApples;
+document.getElementById("totalApplesElement").textContent = total;
