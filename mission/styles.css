@@ -3,5 +3,48 @@
 }
 
 h1 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #006EB6;
+    text-align: center;
+    text-transform: uppercase;
     font-size: 20px;
+    margin-bottom: 5px;
+}
+
+p, .does-list {
+    font-size: 20px;
+}
+
+main p:first-child {
+    margin-top: 50px;
+}
+
+li {
+    margin: 20px 10px 20px 10px;
+
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.content {
+    display: block;
+    max-width: 600px;
+    padding: 50px 100px 50px 100px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    line-height: 1.5;
 }
