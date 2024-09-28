@@ -10,7 +10,7 @@ function changeTheme() {
     value = themeSelector.value
 
     // if the value is dark then:
-    if (value = "dark") {
+    if (value === "dark") {
         // add the dark class to the body (and to the theme selectro)
         body.classList.add("dark")
         themeSelector.classList.add("dark")
