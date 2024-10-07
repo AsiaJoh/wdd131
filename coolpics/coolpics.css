@@ -28,6 +28,17 @@ h1 {
     font-size: 50px;
 }
 
+button {
+    background-color: var(--primary-color);
+    border-style: none;
+    color: var(--text-light);
+    font-size: 1.6em;
+}
+
+ul li{
+    padding: 3px;
+}
+
 main {
     background-color: var(--text-light);
     color: var(--text-dark);
@@ -44,6 +55,10 @@ img {
     height: 250px;
     width: 250px;
     object-fit: cover;
+    border: 5px solid;
+    border-color: white;
+    box-shadow: 4px 4px 5px black;
+
 }
 
  a:visited {
