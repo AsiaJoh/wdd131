@@ -114,11 +114,23 @@ h1 {
         margin: 0;
         padding: 0;
 
-        display: grid;
+        display: inline-grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
 
-        
+    figure {
+        margin: 5px;
+    }
+
+    img {
+        max-width: 50%;
+        height: 250px;
+        width: 250px;
+        object-fit: cover;
+        border: 5px solid;
+        border-color: white;
+        box-shadow: 4px 4px 5px black;
     }
 
     .item1 {
