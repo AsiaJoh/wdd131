@@ -101,6 +101,7 @@ h1 {
     .gallery {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 15%;
     }
 
     button {
@@ -119,12 +120,12 @@ h1 {
         grid-template-rows: 1fr 1fr;
     }
 
-    figure {
+    /* figure {
         margin: 5px;
-    }
+    } */
 
     img {
-        max-width: 50%;
+        /* max-width: 50%; */
         height: 250px;
         width: 250px;
         object-fit: cover;
