@@ -2,13 +2,41 @@ let tasks = [];
 
 function renderTasks(tasks) {
     // get the list element from the DOM
+
     // loop through the tasks array. transform (map) each task object into the appropriate HTML to represent a to-do.
+
 }
 
 function newTask() {
     // get the value entered into the #todo input
+    const task = document.getElementById("todo").value;
+
     // add it to our arrays tasks
+    // Supposed task object format: { detail: task, completed: false}
+    let taskObject = {
+        detail: task,
+        completed: false// IDK what to put here right now, so for now I'll copy the format
+    }
+    // Append taskObject to tasks array
+    tasks.push(taskObject)
+
     // render out the list
+    // Retrieve the HTML element that will be used by the list
+    const listElement = document.getElementById("todoList");
+
+    // Iterate over the array and create <li> elements
+    tasks.forEach(taskObject => {
+        // Create new li element
+        let listItem = document.createElement("li");
+
+        // Set text of li
+        listItem.textContent = "$Detail: {taskObject.detail}, Completed: ${taskObject.completed}"; // whyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy is this not working
+
+        // Apend li to ul
+        listElement.appendChild(listItem);
+    })
+
+
 }
 
 function removeTask(taskElement) {
