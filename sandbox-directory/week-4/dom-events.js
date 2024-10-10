@@ -2,8 +2,24 @@ let tasks = [];
 
 function renderTasks(tasks) {
     // get the list element from the DOM
+    
+    // Retrieve the HTML element that will be used by the list
+    const listElement = document.getElementById("todoList");
 
     // loop through the tasks array. transform (map) each task object into the appropriate HTML to represent a to-do.
+    
+    // Iterate over the array and create <li> elements
+    tasks.forEach(taskObject => {
+        // Create new li element
+        let listItem = document.createElement("li");
+
+        // Set text of li
+        listItem.textContent = "$Detail: {taskObject.detail}, Completed: ${taskObject.completed}"; 
+
+        // Apend li to ul
+        listElement.appendChild(listItem);
+    })
+    
 
 }
 
@@ -21,22 +37,7 @@ function newTask() {
     tasks.push(taskObject)
 
     // render out the list
-    // Retrieve the HTML element that will be used by the list
-    const listElement = document.getElementById("todoList");
-
-    // Iterate over the array and create <li> elements
-    tasks.forEach(taskObject => {
-        // Create new li element
-        let listItem = document.createElement("li");
-
-        // Set text of li
-        listItem.textContent = "$Detail: {taskObject.detail}, Completed: ${taskObject.completed}"; // whyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy is this not working
-
-        // Apend li to ul
-        listElement.appendChild(listItem);
-    })
-
-
+    renderTasks(taskObject);
 }
 
 function removeTask(taskElement) {
@@ -75,4 +76,7 @@ function manageTasks(event) {
 }
 
 // Add your event listeners here
+const button = document.getElementById("submitTask")
+button.addEventListener("click", newTask())
+
 // We need to attatch listeners to the submit button and the list. Listen for a click, call the "newTask" function on submit and call the "manageTasks" function if either of the icons are clicked in the list of tasks.
