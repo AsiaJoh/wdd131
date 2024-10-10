@@ -108,7 +108,7 @@ h1 {
     }
 
     ul {
-        max-width: 800px;
+        /* max-width: 800px; */
         
         list-style-type: none;
         margin: 0;
