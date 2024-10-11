@@ -1,33 +1,34 @@
 let tasks = [];
 
+function taskTemplate(task) {
+    return `<li ${task.completed ? 'class="strike"' : ""}>
+            <p>${task.detail}</p>
+            <div>
+                <span data-function="delete">❎</span>
+                <span data-function="complete">✅</span>
+            </div>
+        </li>`
+}
+
 function renderTasks(tasks) {
     // get the list element from the DOM
     
     // Retrieve the HTML element that will be used by the list
-    const listElement = document.getElementById("todoList");
+    const listElement = document.querySelector("#todoList");
+    listElement.innerHTML = "";
 
     // loop through the tasks array. transform (map) each task object into the appropriate HTML to represent a to-do.
-    
-    // Iterate over the array and create <li> elements
-    tasks.forEach(taskObject => {
-        // Create new li element
-        let listItem = document.createElement("li");
-
-        // Set text of li
-        listItem.textContent = "$Detail: {taskObject.detail}, Completed: ${taskObject.completed}"; 
-
-        // Apend li to ul
-        listElement.appendChild(listItem);
-    })
-    
-
+    const html = tasks.map(taskTemplate).join("");
+    listElement.innerHTML = html
 }
+    
 
 function newTask() {
     // get the value entered into the #todo input
-    const task = document.getElementById("todo").value;
+    const task = document.querySelector("#todo").value;
 
     // add it to our arrays tasks
+
     // Supposed task object format: { detail: task, completed: false}
     let taskObject = {
         detail: task,
@@ -36,8 +37,10 @@ function newTask() {
     // Append taskObject to tasks array
     tasks.push(taskObject)
 
+    // A quicker way to do the "add to arrays" step?: tasks.push({ detail: task, completed: false });
+
     // render out the list
-    renderTasks(taskObject);
+    renderTasks(tasks);
 }
 
 function removeTask(taskElement) {
@@ -55,7 +58,7 @@ function removeTask(taskElement) {
 function completeTask(taskElement) {
     // In this case we need to find the index of the task so we can modift it.
     const taskIndex = tasks.findIndex(
-        (task) => task.detail === taskElement.childNodes[0].innerText
+        (task) => task.detail === taskElement.querySelector("p").innerText
     );
     // once we have the index we can modify the complete field.
     // tasks[taskIndex].completed ? false : true is a ternary expression.
@@ -69,14 +72,26 @@ function completeTask(taskElement) {
 function manageTasks(event) {
     // did they click the delete or complete icon?
     console.log(event.target);
-    console.log(event.currentTarget);
     // event.target will point to the actual icon clicked on. We need to get the parent li to work with however. HINT: Remember element.closest()? Look it up if you don't
+    const parent = event.target.closest("li");
+    if (event.target.dataset.action === "delete") {
+        removeTask(parent);
+    }
+    if (event.target.dataset.action === "complete") {
+        completeTask(parent);
+    }
 
     // because we added 'data-action="delete"' to each icon in a task we can access a dataset property on our target (e.target.dataset.action)
+    // use that in a couple of if statements to decide wether to run removeTask or complete Task
 }
 
 // Add your event listeners here
-const button = document.getElementById("submitTask")
+// We need to attatch listeners to the submit button and the list. Listen for a click, call the "newTask" function on submit and call the "manageTasks" function if either of the icons are clicked in the list of tasks.
+const button = document.querySelector("#submitTask")
 button.addEventListener("click", newTask())
 
-// We need to attatch listeners to the submit button and the list. Listen for a click, call the "newTask" function on submit and call the "manageTasks" function if either of the icons are clicked in the list of tasks.
+const todolist = document.querySelector("#todoList")
+todolist.addEventListener("click", manageTasks);
+
+// render the initial list of tasks (if any) when the page loads
+renderTasks(tasks);
