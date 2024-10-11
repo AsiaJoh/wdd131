@@ -4,8 +4,8 @@ function taskTemplate(task) {
     return `<li ${task.completed ? 'class="strike"' : ""}>
             <p>${task.detail}</p>
             <div>
-                <span data-function="delete">❎</span>
-                <span data-function="complete">✅</span>
+                <span data-action="delete">❎</span>
+                <span data-action="complete">✅</span>
             </div>
         </li>`
 }
@@ -72,7 +72,11 @@ function completeTask(taskElement) {
 function manageTasks(event) {
     // did they click the delete or complete icon?
     console.log(event.target);
+
     // event.target will point to the actual icon clicked on. We need to get the parent li to work with however. HINT: Remember element.closest()? Look it up if you don't
+    // because we added 'data-action="delete"' to each icon in a task we can access a dataset property on our target (e.target.dataset.action)
+    // use that in a couple of if statements to decide wether to run removeTask or complete Task
+    
     const parent = event.target.closest("li");
     if (event.target.dataset.action === "delete") {
         removeTask(parent);
@@ -80,9 +84,6 @@ function manageTasks(event) {
     if (event.target.dataset.action === "complete") {
         completeTask(parent);
     }
-
-    // because we added 'data-action="delete"' to each icon in a task we can access a dataset property on our target (e.target.dataset.action)
-    // use that in a couple of if statements to decide wether to run removeTask or complete Task
 }
 
 // Add your event listeners here
