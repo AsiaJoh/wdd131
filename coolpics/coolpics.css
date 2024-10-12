@@ -29,7 +29,7 @@ h1 {
     margin-top: 0;
 }
 
-header button {
+.menu-button {
     background-color: var(--primary-color);
     border-style: none;
     color: var(--text-light);
@@ -211,7 +211,7 @@ h1 {
         box-shadow: 4px 4px 5px black;
     }
 
-    header button {
+    .menu-button  {
         display: none;
     }
 
