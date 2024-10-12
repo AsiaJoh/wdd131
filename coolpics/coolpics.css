@@ -106,34 +106,43 @@ h1 {
     bottom:0;
     right:0;
     background: rgba(0, 0, 0, 0.25);
-    display: grid;
-    grid-template-rows: auto auto;
+    /* display: grid;
+    grid-template-rows: auto auto; */
     z-index: 10;
+    
+
+
+    display: inline-block;
+    text-align: right;
+    padding: 20px;
+
+
 }
 
 .close-viewer {
     color: var(--text-light);
-    grid-row: 1/2;
+    /* grid-row: 1/2; */
     font-size: 1.2em;
     background: none;
     border: none;
 
-    padding: 5px;
+    /* padding: 5px; */
     margin: 0;
     width: auto;
     height: auto;
-    justify-self: end;
-    align-self: center;
+    /* justify-self: end; */
+    /* align-self: center; */
+    
+    cursor: pointer;
 }
 
 .viewer img {
-    /* object-fit: contain; */
-    grid-row: 2/3;
+    /* grid-row: 2/3; */
     max-height: 100%;
-    /* max-width: 100% */
+    /* justify-self: center; */
 
-    justify-self: center;
-    /* align-self: center; */
+    position: relative;
+    display: inline-block;
 }
 
  @media screen and (min-width: 700px){
