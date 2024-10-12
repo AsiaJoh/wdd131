@@ -29,7 +29,7 @@ h1 {
     margin-top: 0;
 }
 
-button {
+header button {
     background-color: var(--primary-color);
     border-style: none;
     color: var(--text-light);
@@ -56,7 +56,7 @@ h2 {
     grid-template-columns: 1fr;
 }
 
-img {
+.gallery img {
     max-width: 100%;
     height: 250px;
     width: 250px;
@@ -107,19 +107,33 @@ h1 {
     right:0;
     background: rgba(0, 0, 0, 0.25);
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2;
+    grid-template-rows: auto auto;
     z-index: 10;
 }
 
 .close-viewer {
     color: var(--text-light);
     grid-row: 1/2;
+    font-size: 1.2em;
+    background: none;
+    border: none;
+
+    padding: 5px;
+    margin: 0;
+    width: auto;
+    height: auto;
+    justify-self: end;
+    align-self: center;
 }
 
 .viewer img {
+    /* object-fit: contain; */
     grid-row: 2/3;
     max-height: 100%;
+    /* max-width: 100% */
+
+    justify-self: center;
+    /* align-self: center; */
 }
 
  @media screen and (min-width: 700px){
@@ -130,8 +144,41 @@ h1 {
         margin: 0 10%;
     }
 
-
-
+    .viewer {
+        position: fixed;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background: rgba(0, 0, 0, 0.25);
+        display: grid;
+        grid-template-rows: 2;
+        z-index: 10;
+        margin: 5% 5%;
+    }
+    
+    .close-viewer {
+        color: var(--text-light);
+        grid-row: 1/2;
+        font-size: 1.2em;
+        background: none;
+        border: none;
+    
+        padding: 0;
+        margin: 0;
+        width: auto;
+        justify-self: end;
+    }
+    
+    .viewer img {
+        grid-row: 2/3;
+        max-height: 100%;
+    
+        border: none;
+        box-shadow: none;
+        justify-self: center;
+        align-self: center;
+    }
  }
 
  @media screen and (min-width: 1100px){
@@ -155,7 +202,7 @@ h1 {
         box-shadow: 4px 4px 5px black;
     }
 
-    button {
+    header button {
         display: none;
     }
 
@@ -170,5 +217,41 @@ h1 {
 
     .item1 {
         grid-row: 2/3;
+    }
+
+    .viewer {
+        position: fixed;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background: rgba(0, 0, 0, 0.25);
+        display: grid;
+        grid-template-rows: 2;
+        z-index: 10;
+        margin: 5% 5%;
+    }
+    
+    .close-viewer {
+        color: var(--text-light);
+        grid-row: 1/2;
+        font-size: 1.2em;
+        background: none;
+        border: none;
+    
+        padding: 0;
+        margin: 0;
+        width: auto;
+        justify-self: end;
+    }
+    
+    .viewer img {
+        grid-row: 2/3;
+        max-height: 100%;
+    
+        border: none;
+        box-shadow: none;
+        justify-self: center;
+        align-self: center;
     }
  }
