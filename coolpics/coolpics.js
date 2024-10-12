@@ -15,9 +15,6 @@ function viewerTemplate(pic, alt) {
 }
 
 function viewHandler(event) {
-    
-    const viewer = document.querySelector(".viewer");
-
     // Adding click event to the images which will render the viewer upon being clicked
     const imgElement = event.target.closest("img");
     if (!imgElement) return; // Exit if not an image (remove this later??)
@@ -33,6 +30,8 @@ function viewHandler(event) {
     // insert the viewerTemplate into the top of the body element
     // (element.insertAdjacentHTML("afterbegin", htmltoinsert))
     document.body.insertAdjacentHTML("afterbegin", viewerTemplate(fullImg, imgElement.alt)); 
+
+    const viewer = document.querySelector(".viewer");
 
     // Make the modal visible, since initially it is not
     viewer.style.display = "grid"; // Set display to grid
