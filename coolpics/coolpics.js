@@ -15,6 +15,9 @@ function viewerTemplate(pic, alt) {
 }
 
 function viewHandler(event) {
+    
+    const viewer = document.querySelector(".viewer");
+
     // Adding click event to the images which will render the viewer upon being clicked
     const imgElement = event.target.closest("img");
     if (!imgElement) return; // Exit if not an image (remove this later??)
@@ -46,6 +49,7 @@ gallery.addEventListener("click", viewHandler)
 
 
 function closeViewer() {
+    const viewer = document.querySelector(".viewer");
     console.log("Close button clicked!"); // This doesn't display...
     if (viewer) viewer.remove(); // Remove the viewer if it exists
 }
