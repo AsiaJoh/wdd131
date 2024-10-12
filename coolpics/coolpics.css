@@ -36,10 +36,6 @@ button {
     font-size: 1.6em;
 }
 
-/* ul {
-    display: block;
-} */
-
 ul li{
     padding: 3px;
 }
@@ -84,6 +80,10 @@ figure:last-of-type {
     color: var(--accent-color);
  }
 
+ a:hover {
+    color: var(--accent-color);
+ }
+
  a:link {
     color: var(--text-light);
     text-decoration: underline;
@@ -98,6 +98,29 @@ h1 {
     margin: 0;
     padding: 0;
  }
+
+.viewer {
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background: rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2;
+    z-index: 10;
+}
+
+.close-viewer {
+    color: var(--text-light);
+    grid-row: 1/2;
+}
+
+.viewer img {
+    grid-row: 2/3;
+    max-height: 100%;
+}
 
  @media screen and (min-width: 700px){
     
