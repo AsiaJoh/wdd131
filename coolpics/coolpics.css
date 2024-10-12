@@ -272,10 +272,10 @@ h1 {
     .viewer img {
         justify-self: center;
         grid-row: 2/3;
-        /* object-fit: contain; */
-        /* width: 80%; */
-        /* height: 80%; */
+        object-fit: contain;
         max-height: 100%;
+        max-width: 800px;
+
 
     }
  }
