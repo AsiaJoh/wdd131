@@ -1,6 +1,7 @@
 let menuButton = document.querySelector(".menu-button")
 let nav = document.querySelector("ul")
 let gallery = document.querySelector(".gallery")
+const viewer = document.querySelector(".viewer");
 
 menuButton.addEventListener("click", function ToggleMenu(){
     nav.hidden = !nav.hidden
@@ -24,10 +25,14 @@ function viewHandler(event) {
 
     // construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
     const fullImg = `${parts[0]}-full.jpeg`;
+    console.log(fullImg); // This displays the correct file name! (I think. It is supposed to be norris-full.jpeg)
 
     // insert the viewerTemplate into the top of the body element
     // (element.insertAdjacentHTML("afterbegin", htmltoinsert))
-    document.body.insertAdjacentHTML("afterbegin", viewerTemplate(fullImg, imgElement.alt)); // Add arguments for viewer template???
+    document.body.insertAdjacentHTML("afterbegin", viewerTemplate(fullImg, imgElement.alt)); 
+
+    // Make the modal visible, since initially it is not
+    viewer.style.display = "grid"; // Set display to grid
 
     // create a variable to hold the element that was clicked on from event.target
     let viewerButton = document.querySelector(".close-viewer")
@@ -41,6 +46,6 @@ gallery.addEventListener("click", viewHandler)
 
 
 function closeViewer() {
-    const viewer = document.querySelector(".viewer");
+    console.log("Close button clicked!"); // This doesn't display...
     if (viewer) viewer.remove(); // Remove the viewer if it exists
 }

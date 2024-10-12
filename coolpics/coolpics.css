@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
  :root {
  --primary-color: #52489c;
  --secondary-color: #59c3c3;
@@ -116,7 +117,7 @@ h1 {
     justify-items: center;
     align-items: center;
 
-
+    display: none;
 }
 
 .close-viewer {
@@ -164,6 +165,8 @@ h1 {
         grid-template-rows: 2;
         z-index: 10;
         margin: 5% 5%;
+
+        display: none;
     }
     
     .close-viewer {
@@ -246,8 +249,7 @@ h1 {
         align-items: center;
         margin: 5% 5%;
 
-        /* max-height: 90%; */
-    
+        display: none;
     }
     
     .close-viewer {
