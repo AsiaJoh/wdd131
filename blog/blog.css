@@ -40,14 +40,27 @@
 
     display: grid;
     grid-template-columns: 2fr;
+    grid-template-rows: 2fr;
  }
 
- #book-data {
+ #book-data-Magyk {
     grid-column: 1/2;
+    grid-row: 1/2;
  }
 
- #book-showcase {
+ #book-showcase-Magnus {
     grid-column: 2/3;
+    grid-row: 1/2;
+ }
+
+ #book-data-Magnus {
+    grid-column: 1/2;
+    grid-row: 2/3;
+ }
+
+ #book-showcase-Magyk {
+    grid-column: 2/3;
+    grid-row: 2/3;
  }
 
  main aside {
