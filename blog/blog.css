@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"); */
 
  :root {
  --gold-color: #EFC69B;
@@ -8,10 +8,60 @@
  --headline-font: Lora, Impact, serif;
  }
 
+ header {
+    font: var(--headline-font);
+    color: var(--dark-color);
+ }
+
+ .main-nav {
+    display: grid;
+    grid-template-columns: 90px 90px 80px;
+
+    justify-content: end;
+    justify-items: end;;
+    color: var(--red-color);
+ }
+
+ main-nav a {
+    color: var(--red-color); /* Why isn't this working :( */
+ }
+
  body {
     font: var(--body-font);
  }
 
- header {
-    font: var(--headline-font);
+ main {
+    display: grid;
+    grid-template-columns: 2fr;
+ }
+
+ main article {
+    grid-column: 1/2;
+
+    display: grid;
+    grid-template-columns: 2fr;
+ }
+
+ #book-data {
+    grid-column: 1/2;
+ }
+
+ #book-showcase {
+    grid-column: 2/3;
+ }
+
+ main aside {
+    grid-column: 2/3;    
+ }
+
+ #book-data {
+    color: var(--dark-color);
+ }
+
+ h2 {
+    color: var(--red-color);
+ }
+
+ img {
+    max-width: 250px;
  }
