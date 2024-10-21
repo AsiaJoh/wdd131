@@ -5,7 +5,7 @@
  --red-color: #AF1B3F;
  --dark-color: #473144;
  --body-font: Helvetica, Arial, sans-serif;
- --headline-font: Lora, Impact, serif;
+ --headline-font: Lora, Impact, serif; /* Why isn't this importing again :/ */
  }
 
  header {
@@ -13,18 +13,53 @@
     color: var(--dark-color);
  }
 
+ h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 50px;
+ }
+
+ hr {
+    border-top: 3px solid;
+    color: var(--gold-color);
+ }
+
  .main-nav {
     display: grid;
     grid-template-columns: 90px 90px 80px;
 
     justify-content: end;
-    justify-items: end;;
+    justify-items: end;
     color: var(--red-color);
+
+    list-style-type: none;
+
+    max-width: 260px;
+    padding: 0;
+    margin-left: 70%;
  }
 
- main-nav a {
-    color: var(--red-color); /* Why isn't this working :( */
+ .main-nav li {
+    padding: 20px 20px;
+    font-size: 1.2em;
  }
+
+
+.main-nav a {
+    color: var(--red-color);
+    text-decoration: none;
+ }
+
+.skiptocontent {
+    position: absolute;
+    top: -40px;
+    background-color: var(--dark-color);
+    color:var(--gold-color)
+}
+
+.skiptocontent a:focus {
+    top: 0;
+}
 
  body {
     font: var(--body-font);
@@ -48,7 +83,7 @@
     grid-row: 1/2;
  }
 
- #book-showcase-Magnus {
+ #book-showcase-Magyk {
     grid-column: 2/3;
     grid-row: 1/2;
  }
@@ -58,23 +93,32 @@
     grid-row: 2/3;
  }
 
- #book-showcase-Magyk {
+ #book-showcase-Magnus {
     grid-column: 2/3;
     grid-row: 2/3;
  }
 
- main aside {
-    grid-column: 2/3;    
+ .book-data {
+    padding: 10px;
+    margin-right: 50px 
  }
 
- #book-data {
-    color: var(--dark-color);
+ .book-showcase {
+    padding-left: 120px;
  }
 
  h2 {
     color: var(--red-color);
+    font-size: 2em;
  }
 
  img {
     max-width: 250px;
+    margin: 10px 0px 10px 30px;
+ }
+ 
+
+ main aside {
+    grid-column: 2/3; 
+
  }
