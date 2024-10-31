@@ -13,25 +13,48 @@
     <main>
       <section class="errors"></section>
       <form id="checkoutForm" action="completed.html">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
 
-        <label for="mail">Email:</label>
-        <input type="text" id="mail" name="contactInfo" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
         <label for="address">Address:</label>
-        <input type="text" id="address" name="homeLocation" required>
+        <textarea id="address" name="address" rows="4" required></textarea>
 
-        <label for="paymethod">Payment Method:</label>
-        <input type="text" id="paymethod" name="payment" required>
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+            <option value="">Select Payment Method</option>
+            <option value="creditCard">Credit Card</option>
+            <option value="paypal">PayPal</option>
+        </select>
 
-        <label for="ccNumber">Credit Card Number:</label>
-        <input type="text" id="ccNumber" name="payment" pattern="[0-9]{16}" class="hide" required>
+        <!-- Container for credit card details -->
+        <p id="creditCardNumberContainer" class="hide">
+            <label for="creditCardNumber">Credit Card Number:</label>
+            <input 
+                type="text" 
+                id="creditCardNumber" 
+                name="creditCardNumber" 
+                pattern="[0-9]{16}" 
+                placeholder="Enter 16 digits" 
+                required
+            >
+        </p>
 
-        <label for="ppalUsername">PayPal Username</label>
-        <input type="text" id="ppalUsername" name="payment" class="hide" required>
-
-        <button>Place Order</button>
+        <!-- Container for PayPal details -->
+         <p id="paypalUsernameContainer" class="hide">
+            <label for="paypalUsername">PayPal Username:</label>
+            <input 
+                type="text"
+                id="paypalUsername"
+                name="paypalUsername"
+                placeholder="Enter Paypal username"
+                required
+            >
+         </p>
+        
+        <button type="submit">Place Order</button>
       </form>
     </main>
   </body>
