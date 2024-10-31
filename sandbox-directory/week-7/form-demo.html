@@ -12,7 +12,27 @@
     <header><h1>Checkout</h1></header>
     <main>
       <section class="errors"></section>
-      <form id="checkoutForm" action="completed.html"></form>
+      <form id="checkoutForm" action="completed.html">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="mail">Email:</label>
+        <input type="text" id="mail" name="contactInfo" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="homeLocation" required>
+
+        <label for="paymethod">Payment Method:</label>
+        <input type="text" id="paymethod" name="payment" required>
+
+        <label for="ccNumber">Credit Card Number:</label>
+        <input type="text" id="ccNumber" name="payment" pattern="[0-9]{16}" class="hide" required>
+
+        <label for="ppalUsername">PayPal Username</label>
+        <input type="text" id="ppalUsername" name="payment" class="hide" required>
+
+        <button>Place Order</button>
+      </form>
     </main>
   </body>
 </html>
