@@ -25,7 +25,7 @@ const aCourse = {
     },
     dropStudent: function (sectionNum) {
         // find the right section...Array.findIndex will work here
-        const sectionIndex = this.section.findIndex(
+        const sectionIndex = this.sections.findIndex(
             (section) => section.sectionNum == sectionNum
         );
         if (sectionIndex >= 0) {
