@@ -9,3 +9,5 @@ import aCourse from "./Course.mjs";
     const sectionNum = document.querySelector("#sectionNumber").value;
     aCourse.changeEnrollment(sectionNum, false);
   });
+
+  aCourse.init()
