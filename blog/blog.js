@@ -23,8 +23,21 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
-	}
-]
+	},
+	{
+		id: 3,
+		title: "Belgariad Book One: Pawn of Prophecy",
+		date: "Feb 12, 2022",
+		description:
+		'A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his "Aunt Pol" and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.',
+		imgSrc:
+		"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+		imgAlt: "Book cover for Pawn of Prophecy",
+		ages: "12-16",
+		genre: "Fantasy",
+		stars: "⭐⭐⭐⭐⭐"
+		}
+];
 
 articles.forEach((article) => {
 	// Call a bunch of functions needed to create the blog
@@ -33,7 +46,7 @@ articles.forEach((article) => {
 	let htmlString = toString(article);
 
 	// Function to change that special string into legitimate code for the html
-	stringToHTML(htmlString)
+	stringToHTML(htmlString);
 
 
 })
@@ -63,10 +76,13 @@ function toString(article) {
 					<img src=${imgSrc} alt=${imgAlt}>
 					<p class="summary">${description}</p>
 				</section>
-        	</article>`
+        	</article>`;
 }
 
 function stringToHTML(htmlString) {
-	// Take the received html (in the form of a string), and convert it to html within the document
-	document.querySelector(main).innerHTML = htmlString
+	// Take the received html, and insert it into the document
+
+	const main = document.querySelector("main");
+
+	main.insertAdjacentHTML("afterbegin", htmlString);
 }

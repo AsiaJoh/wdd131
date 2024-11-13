@@ -97,11 +97,22 @@
  #article2 .book-data {
     grid-column: 1/2;
     grid-row: 2/3;
+
  }
 
  #article2 .book-showcase {
     grid-column: 2/3;
     grid-row: 2/3;
+ }
+
+ #article3 .book-data {
+   grid-column: 1/2;
+   grid-row: 3/4;
+ }
+
+ #article3 .book-showcase {
+   grid-column: 2/3;
+   grid-row: 3/4;
  }
 
  h4 {
@@ -116,7 +127,7 @@
     text-align: right; 
     border-right: 3px solid;
     border-color: var(--gold-color);
-    max-width: 180px;
+    width: 180px;
  }
 
  .book-data p {
@@ -160,7 +171,7 @@
    min-width: 280px;
 
    grid-column: 2/3;
-    grid-row: 1/3;
+    grid-row: 1/4;
  }
 
  .book-data, .book-showcase {
