@@ -69,6 +69,7 @@
  main {
     display: grid;
     grid-template-columns: 2fr;
+    margin-top: 30px;
  }
 
  main article {
@@ -82,6 +83,10 @@
  #book-data-Magyk {
     grid-column: 1/2;
     grid-row: 1/2;
+ }
+
+ .date-published {
+   font-size: 25px;
  }
 
  #book-showcase-Magyk {
@@ -99,27 +104,59 @@
     grid-row: 2/3;
  }
 
+ h4 {
+   min-width: 121px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+
  .book-data {
-    padding: 10px;
-    margin-right: 50px 
+    padding: 10px 10px 10px 50px;
+    margin-left: 50px;
+    text-align: right; 
+    border-right: 3px solid;
+    border-color: var(--gold-color);
+ }
+
+ .book-data p {
+   line-height: 0.5em;
  }
 
  .book-showcase {
-    padding-left: 120px;
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+ }
+
+ .book-showcase h2{
+   text-align: left;
+ }
+
+ .book-showcase p {
+   text-align: left;
  }
 
  h2 {
     color: var(--red-color);
     font-size: 2em;
+    margin-top: 13px;
  }
 
  img {
     max-width: 250px;
-    margin: 10px 0px 10px 30px;
+    /* margin: 10px 0px 10px 30px; */
  }
  
 
  main aside {
     grid-column: 2/3; 
 
+ }
+
+ #book-filter {
+   border: 3px solid;
+   border-color: var(--gold-color);
+ }
+
+ .book-data, .book-showcase {
+   margin-bottom: 30px;
  }
