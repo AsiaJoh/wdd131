@@ -30,12 +30,16 @@ articles.forEach((article) => {
 	// Call a bunch of functions needed to create the blog
 
 	// Function to transform/put the data into that special string
+	let htmlString = toString(article);
 
 	// Function to change that special string into legitimate code for the html
+	stringToHTML(htmlString)
+
+
 })
 
 function toString(article) {
-	const id = article["id"];
+	let id = article["id"];
 	const title = article["title"]
 	const date = article["date"];
 	const description = article["description"];
@@ -45,17 +49,24 @@ function toString(article) {
 	const genre = article["genre"];
 	const stars = article["stars"];
 
-	return `<article id="article1">
-            <section class="book-data">
-                <h4 class="date-published">July 5 2022</h4>
-                <p class="age-range">10-14</p>
-                <p class="genre">Fantasy</p>
-                <p class="rating">****</p>
-            </section>
-            <section class="book-showcase">
-                <h2>Septimus Heap Book One: Magyk</h2>
-                <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Magkycover2.jpg" alt="Book cover for Septimus Heap 1">
-                <p class="summary">If you enjoy stories about seventh sons of seventh sons and magyk this is the book for you.</p>
-            </section>
-        </article>`
+	id = "article" + id;
+
+	return `<article id="${id}">
+				<section class="book-data">
+					<h4 class="date-published">${date}</h4>
+					<p class="age-range">${ages}</p>
+					<p class="genre">${genre}</p>
+					<p class="rating">${stars}</p>
+				</section>
+				<section class="book-showcase">
+					<h2>${title}</h2>
+					<img src=${imgSrc} alt=${imgAlt}>
+					<p class="summary">${description}</p>
+				</section>
+        	</article>`
+}
+
+function stringToHTML(htmlString) {
+	// Take the received html (in the form of a string), and convert it to html within the document
+	document.querySelector(main).innerHTML = htmlString
 }
