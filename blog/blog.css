@@ -80,26 +80,26 @@
     grid-template-rows: 2fr;
  }
 
- #book-data-Magyk {
-    grid-column: 1/2;
-    grid-row: 1/2;
- }
-
  .date-published {
    font-size: 25px;
  }
 
- #book-showcase-Magyk {
+ #article1 .book-data {
+    grid-column: 1/2;
+    grid-row: 1/2;
+ }
+
+ #article1 .book-showcase {
     grid-column: 2/3;
     grid-row: 1/2;
  }
 
- #book-data-Magnus {
+ #article2 .book-data {
     grid-column: 1/2;
     grid-row: 2/3;
  }
 
- #book-showcase-Magnus {
+ #article2 .book-showcase {
     grid-column: 2/3;
     grid-row: 2/3;
  }
