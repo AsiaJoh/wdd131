@@ -3,33 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Credit Card Mock-Up</title>
+    <meta name="description" content="Small mock-up of a credit card front and back.">
+    <meta name="author" content="Anastasia Johansen">
     <link rel="stylesheet" href="creditcard.css" />
     <script src="creditcard.js" defer></script>
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
     <main>
         <form action="">
             <div id="card-front">
-                <label for="total">Total: </label>
-                <input type="text" id="total" name="total" required>
+                <div id="top-row">
+                    <label for="total">Total: </label>
+                    <input type="text" id="total" name="total" required>
 
-                <img src="" alt="favicon">
+                    <img src="favicon.png" alt="favicon">
+                </div>
 
                 <label for="card-number">Card Number</label>
                 <input type="text" id="card-number" name="card-number" required>
 
-                <label for="card-holder">Card Holder</label>
-                <input type="text" id="card-holder" name="card-holder" required>
-
-                <label for="expiration">Expiration</label>
-                <input type="text" id="expiration-month" name="expiration-month" required>
-                <input type="text" id="expiration-year" name="expiration-year" required>
+                <div id="bottom-row">
+                    <div id="card-holder-container">
+                        <label for="card-holder">Card Holder</label>
+                        <input type="text" id="card-holder" name="card-holder" required>
+                    </div>
+    
+                    <div id="expiration-container">
+                        <label for="expiration">Expiration</label>
+                        <div id="expiration-input-container">
+                            <input type="text" id="expiration-month" name="expiration-month" required>
+                            <input type="text" id="expiration-year" name="expiration-year" required>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="card-back">
                 <span id="card-stripe"></span>
-                <label for="cvc/cvv">CVC/CVV</label>
-                <input type="text" id="cvc/cvv" name="cvc/cvv" required>
+                <label for="cvc">CVC/CVV</label>
+                <input type="text" id="cvc" name="cvc" required>
             </div>
             <button type="submit">Submit</button>
         </form>

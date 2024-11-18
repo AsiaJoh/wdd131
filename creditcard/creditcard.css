@@ -1,14 +1,83 @@
 body {
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
+
 
 #card-front {
     z-index: 2;
+    box-shadow: 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
 }
 
-#card-back {
-    z-index: 1;
-    top: 40px;
+#top-row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+label[for="total"] {
+
+    margin-right: 5px;
+}
+
+#total {
+    width: 30px;
+    margin-right: 220px;
+}
+
+
+img {
+    float: right;
+
+}
+
+label[for="card-number"] {
+
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+#card-number {
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+#bottom-row {
+    display: flex;
+    flex-direction: row;
+}
+
+#card-holder-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+#expiration-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#expiration-input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#expiration-month, #expiration-year {
+    width: 30px;
+    margin-right: 5px;
+}
+
+label, input {
+    /* width: 100%; */
+    margin-bottom: 10px;
 }
 
 #card-front, #card-back {
@@ -16,7 +85,7 @@ body {
     width: 390px;
     height: 250px;
 
-    background-color: gray;
+    background-color: rgb(187, 187, 187);
 
     border-radius: 10px;
 
@@ -26,25 +95,15 @@ body {
     box-sizing: border-box;
 }
 
-img {
-    float: right;
-}
+#card-back {
+    z-index: 1;
+    top: 40px;
+    margin-left: 90px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
 
-#card-number, #card-holder {
-    width: 100%;
-}
-
-#expiration-month {
-    /* float: left; */
-}
-
-#expiration-year {
-    /* float: right; */
-}
-
-label {
-    width: 100%;
-    margin-bottom: 8px;
 }
 
 #card-stripe {
@@ -53,4 +112,27 @@ label {
     background-color: black;
     position: absolute;
     right: 0;
+}
+
+label[for="cvc"] {
+    /* align-self: last baseline; */
+    margin-left: 280px;
+    margin-top: 120px;
+    width: 80px;
+    height: 20px;
+}
+
+#cvc {
+    width: 30px;
+    height: 20px;
+    /* align-self: last baseline; */
+    margin-left: -100px;
+    margin-top: 150px;
+}
+
+button {
+    margin-top: 325px;
+    margin-left: 420px;
+    border-radius: 5px;
+    padding: 10px;
 }
