@@ -9,7 +9,17 @@ function validateForm(event) {
     // start by assuming the form is valid.
     let isValid = true;
     // add our validations here
-  
+    if (theForm.paymentMethod.value === "creditCard") {
+      // normally we would need contact the credit card company to verify the number... instead we're only going to allow one as valid, for simplicicty
+      if (theForm.creditCardNumber.value !== "1234123412341234") {
+        isValid = false;
+        errors.push("Invalid Credit Card Number");
+      }
+    }
+    if (theForm.fullName.value !== "Bob") { // This is another exmaple text-case for the sake of this little program. Here, only Bob is a correct name
+      isValid = false;
+      errors.push("Your name is not Bob");
+    }
     // if we ran into any problems above valid will be false.
     if (!isValid) {
       //stop the form from being submitted
@@ -21,6 +31,8 @@ function validateForm(event) {
     }
   }
   
+
+
   function togglePaymentDetails(e) {
     // get a reference to the form. We can access all the named form inputs through the form element.
     const theForm = document.querySelector("#checkoutForm");
@@ -57,4 +69,6 @@ function validateForm(event) {
     .querySelector("#paymentMethod")
     .addEventListener("change", togglePaymentDetails);
   // attach a submit event handler to the form
-  
+  document
+    .querySelector("#checkoutForm")
+    .addEventListener("submit", validateForm);
