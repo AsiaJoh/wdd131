@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="creditcard.css" />
+    <script src="creditcard.js" defer></script>
+</head>
+<body>
+    <main>
+        <form action="">
+            <div id="card-front">
+                <label for="total">Total: </label>
+                <input type="text" id="total" name="total" required>
+
+                <img src="" alt="favicon">
+
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="card-holder">Card Holder</label>
+                <input type="text" id="card-holder" name="card-holder" required>
+
+                <label for="expiration">Expiration</label>
+                <input type="text" id="expiration-month" name="expiration-month" required>
+                <input type="text" id="expiration-year" name="expiration-year" required>
+            </div>
+            <div id="card-back">
+                <span id="card-stripe"></span>
+                <label for="cvc/cvv">CVC/CVV</label>
+                <input type="text" id="cvc/cvv" name="cvc/cvv" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
