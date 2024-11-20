@@ -2,7 +2,7 @@
 let count = 1;
 
 // Add an event listener to the button. 
-let participantButtonRef = document.querySelector("#add")
+let participantButtonRef = document.querySelector("#add");
 participantButtonRef.addEventListener("click", addParticipant);
 
 function participantTemplate(count) {
@@ -44,7 +44,7 @@ function participantTemplate(count) {
                 <option value="12">12th</option>
               </select>
             </div>
-          </section>`
+          </section>`;
 };
 
 function addParticipant () {

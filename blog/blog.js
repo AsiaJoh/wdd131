@@ -77,7 +77,7 @@ function toString(article) {
 					<p class="summary">${description}</p>
 				</section>
         	</article>`;
-}
+};
 
 function stringToHTML(htmlString) {
 	// Take the received html, and insert it into the document
@@ -85,4 +85,4 @@ function stringToHTML(htmlString) {
 	const filterRef = document.querySelector("#book-filter");
 
 	filterRef.insertAdjacentHTML("beforebegin", htmlString);
-}
+};
