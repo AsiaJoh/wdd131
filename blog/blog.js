@@ -49,11 +49,11 @@ articles.forEach((article) => {
 	stringToHTML(htmlString);
 
 
-})
+});
 
 function toString(article) {
 	let id = article["id"];
-	const title = article["title"]
+	const title = article["title"];
 	const date = article["date"];
 	const description = article["description"];
 	const imgSrc = article["imgSrc"];
