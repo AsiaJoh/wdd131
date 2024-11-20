@@ -1,9 +1,13 @@
 // count is the current number of participants shown, automatically started as 1
 let count = 1;
 
-// Add an event listener to the button. 
+// Add an event listener to the participant button. 
 let participantButton = document.querySelector("#add");
 participantButton.addEventListener("click", addParticipant);
+
+// Add an event listener to the form. We are listening for a submit event.
+let form = document.querySelector("form");
+form.addEventListener("submit", submitForm);
 
 function participantTemplate(count) {
     // Return a new participant's html as one big string
@@ -59,26 +63,6 @@ function addParticipant () {
     participantButton.insertAdjacentHTML("beforebegin", participantString);
 };
 
-// Add an event listener to the form. We are listening for a submit event.
-let submitButton = document.querySelector("#submitButton");
-submitButton.addEventListener("submit", submitForm);
-
-function submitForm(event) {
-    // On submit we need to keep the form from reloading the page.
-    event.preventDefault();
-    // Then find all of the fee inputs. There will be one for each participant. The totals from those fields need to be summed.
-    let totalFees = totalFees();
-
-    // Hide the Form... 
-    const form = document.querySelector("form");
-    form.classList.add("hide");
-
-    // And show the summary element.
-    htmlString = successTemplate(info);
-
-    const h1 = document.querySelector("h1");
-	h1.insertAdjacentHTML("afterend", htmlString);
-};
 
 // create a function to calculate the fee total.
 function totalFees () {
@@ -86,14 +70,19 @@ function totalFees () {
 
     // the selector below lets us grab any element that has an id that begins with "fee"
     let feeElements = document.querySelectorAll("[id^=fee]");
-    console.log(feeElements); // For debugging I assume
     // querySelectorAll returns a NodeList. It's like an Array, but not exactly the same.
     // The line below is an easy way to convert something that is list-like to an actual Array so we can use all of the helpful Array methods...like reduce
     // The "..." is called the spread operator. It "spreads" apart the list, then the [] we wrapped it in inserts those list items into a new Array.
     feeElements = [...feeElements];
     // sum up all of the fees. Something like Array.reduce() could be very helpful here :) Or you could use a Array.forEach() as well.
-    let sum = feeElements.reduce((runningTotal, currentValue) => runningTotal + currentValue);
+    let sum = feeElements.reduce((runningTotal, currentValue) => {
+        // converting to number
+        let fee = parseFloat(currentValue.value) || 100;
 
+        console.log("i hate it here (runningTotal + fee)")
+        console.log(runningTotal + fee);
+        return runningTotal + fee;
+    });
     // Remember that the text that was entered into the input element will be found in the .value of the element.
 
     // once you have your total make sure to return it!
@@ -102,16 +91,41 @@ function totalFees () {
 
 function successTemplate(info) {
     let name = info["adultName"];
-	let totalFees = info["feeTotal"];
+	let feeTotal = info["feeTotal"];
 
+    console.log("feeTotal")
+    console.log(feeTotal);
     // Return the successTemplate's html as one big string
-    return `<p>Thank you ${name} for registering. You have registered ${count} participants and owe $${totalFees} in Fees.</p>`
+    return `<p>Thank you ${name} for registering. You have registered ${count} participant(s) and owe $${feeTotal} in Fees.</p>`
 };
 
-// info will be an object with the adult name, number of participants, and fee total.
-    // Get the adult name from the form.
-let info = {
-    adultName: document.getElementById("#adult_name"),
-    numParticipants: count,
-    feeTotal: totalFees()
+function adultName() {
+    let adult_Name = document.getElementById("adult_name").value;
+
+    return adult_Name;
+};
+
+function submitForm(event) {
+    // On submit we need to keep the form from reloading the page.
+    event.preventDefault();
+
+    // info will be an object with the adult name, number of participants, and fee total.
+    let info = {
+        adultName: adultName(),
+        numParticipants: count,
+        feeTotal: totalFees()
+    };
+
+    // Then find all of the fee inputs. There will be one for each participant. The totals from those fields need to be summed.
+    // let feeTotal = totalFees();
+
+    // Hide the Form... 
+    // const form = document.querySelector("form");
+    form.classList.add("hide");
+
+    // And show the summary element.
+    htmlString = successTemplate(info);
+
+    const h1 = document.querySelector("h1");
+	h1.insertAdjacentHTML("afterend", htmlString);
 };
