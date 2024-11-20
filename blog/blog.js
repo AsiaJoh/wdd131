@@ -82,7 +82,7 @@ function toString(article) {
 function stringToHTML(htmlString) {
 	// Take the received html, and insert it into the document
 
-	const main = document.querySelector("main");
+	const filterRef = document.querySelector("#book-filter");
 
-	main.insertAdjacentHTML("afterbegin", htmlString);
+	filterRef.insertAdjacentHTML("beforebegin", htmlString);
 }
