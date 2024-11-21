@@ -28,3 +28,8 @@
     /*An alternate mthod is the gap property, though it appears to not be working...*/
     /* gap: 5em; */
   }
+
+  .media-card {
+    display: flex;
+    
+  }
