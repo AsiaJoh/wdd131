@@ -12,3 +12,19 @@
   img {
     max-width: 100%;
   }
+
+  .main-nav {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    /*A combination of the flex-grow, flex-strink, and flex-basis properties, formatted as flex: grow shrink basis*/
+    /*This rule will not allow the items to grow if there's available space, wilL allow them to shrink, and will give them a starting size of 5em*/
+    flex: 0 1 5em;
+    text-align: center;
+
+    /*An alternate mthod is the gap property, though it appears to not be working...*/
+    /* gap: 5em; */
+  }
