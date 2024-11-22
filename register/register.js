@@ -75,26 +75,24 @@ function totalFees () {
     // The "..." is called the spread operator. It "spreads" apart the list, then the [] we wrapped it in inserts those list items into a new Array.
     feeElements = [...feeElements];
     // sum up all of the fees. Something like Array.reduce() could be very helpful here :) Or you could use a Array.forEach() as well.
-    let sum = feeElements.reduce((runningTotal, currentValue) => {
-        // converting to number
-        let fee = parseFloat(currentValue.value) || 100;
+    let sum = 0.0;
+    for(let i = 0; i < feeElements.length; i++) {
+        let value = parseFloat(feeElements[i].value);
+        sum += value;
+    };
 
-        console.log("i hate it here (runningTotal + fee)")
-        console.log(runningTotal + fee);
-        return runningTotal + fee;
-    });
-    // Remember that the text that was entered into the input element will be found in the .value of the element.
+    console.log(typeof sum);
 
-    // once you have your total make sure to return it!
-    return sum;
+    // To have it display nicely to 2 decimal places
+    let formattedSum = sum.toFixed(2);
+
+    return formattedSum;
 };
 
 function successTemplate(info) {
     let name = info["adultName"];
 	let feeTotal = info["feeTotal"];
 
-    console.log("feeTotal")
-    console.log(feeTotal);
     // Return the successTemplate's html as one big string
     return `<p>Thank you ${name} for registering. You have registered ${count} participant(s) and owe $${feeTotal} in Fees.</p>`
 };
