@@ -31,5 +31,36 @@
 
   .media-card {
     display: flex;
-    
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
   }
+
+  .media-card__content > h3 {
+    margin-top: 0;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+  /*Refers to children of gallery*/
+  .gallery > * {
+    /*Another combination of the flex-grow, flex-strink, and flex-basis*/
+    flex: 1 1 460px;
+  }
+
+@media screen and (min-width: 550px) {
+    .media-card {
+        flex-direction: row;
+    }
+    .media-card__image {
+        /*flex-grow, flex-strink, flex-basis*/
+        flex: 0 1 250px;
+    }
+    .media-card__content {
+        flex: 0 1 60ch;
+    }
+};
