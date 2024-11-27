@@ -9,19 +9,46 @@
 </head>
 <body>
     <header>
-        <!-- logo and site name, use recipe-book.png w/title -->
+         <img src="images/recipe-book.png" alt="Recipe book logo">
+         <h1>RecipeBook</h1>
     </header>
     <main>
-
+        <form action="">
+            <!-- <label for="search">Find a Recipe!</label> -->
+            <input type="text" id="search" name="search" placeholder="Find a recipe" required>
+            <input type="image" id="search-icon" src="images/search.svg" alt="search icon">
+        </form>
+        <hr>
+        <section class="recipes">
+            <img class="image" src="./images/apple-crisp.jpg" alt="Bowl of apple crisp pie with vanilla ice cream.">
+            <div class="recipe-data">
+                <div class="tags">
+                    <p class="tag">dessert</p>
+                </div>
+                <h2 class="name">Apple Crisp</h2>
+                <span
+                class="rating"
+                role="img"
+                aria-label="Rating: 4 out of 5 stars"
+                >
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+                <p class="description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+            </div>
+        </section>
     </main>
     <footer>
-        <a class="attribution" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
         <div class="social">
             <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
             <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
             <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
             <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
         </div>
+        <a class="attribution" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
     </footer>
 </body>
 </html>
