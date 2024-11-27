@@ -61,7 +61,12 @@ form input {
     font-size: 1em;
     padding: 0px;
     margin: 0px;
-    color: var(--text-light)
+    color: var(--text-dark);
+    width: 100%;
+}
+
+#search::placeholder {
+    color: var(--text-dark);
 }
 
 #search-icon {
@@ -119,7 +124,7 @@ footer img {
 
 .attribution {
     font-size: 0.8em;
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
 }
 
 .social img, header img {
@@ -181,7 +186,7 @@ footer img {
 
     .attribution {
         font-size: 0.8em;
-        color: var(--primary-color);
+        /* color: var(--primary-color); */
         padding: 20px;
     }
 
