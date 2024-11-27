@@ -11,7 +11,7 @@
     }
 
 body {
-    margin: 0px;
+    margin: 50px 0px 0px 0px;
     color: var(--text-dark);
 }
 
@@ -123,10 +123,20 @@ footer img {
 }
 
 .social img, header img {
-    max-width: 50px;
+    width: 50px;
 }
 
 @media screen and (min-width: 600px){
+    body {
+        margin: 50px 10px 10px 20px;
+        color: var(--text-dark);
+    }
+
+    header img{
+        width: 100px;
+
+    }
+
     .recipes {
         margin: 20px;
         border-style: solid;
@@ -165,11 +175,25 @@ footer img {
 
     footer {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-between;
     }
+
+    .attribution {
+        font-size: 0.8em;
+        color: var(--primary-color);
+        padding: 20px;
+    }
+
+
 }
 
-@media screen and (min-width: 900px){
-    
+@media screen and (min-width: 960px){
+    body {
+        /* margin: 50px 10px 10px 20px; */
+        margin: 0 auto;
+        margin-top: 50px;
+        color: var(--text-dark);
+        max-width: 940px;
+    }
 }
