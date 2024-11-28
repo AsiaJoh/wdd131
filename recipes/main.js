@@ -7,12 +7,8 @@ stringToHTML(recipeString);
 
 function randomNum () {
     // "Math.random() generates a random number between 0 (inclusive) and 1 (exclusive).
-    // Multiplying it by (max - min) scales it to the range.
-    // Adding min shifts the range to start from the minimum value." - ChatGPT
-    // Math.floor rounds decimals down to the nearest integer
-    // The +1 is to include the "7" within the range...
-    // Or we could just do 8
-    let num = Math.floor(Math.random() * (8 - 0) + 0);
+    // We multiply to scale
+    let num = Math.floor(Math.random() * 8);
     return num;
 };
 
@@ -40,9 +36,9 @@ function recipeTemplate(recipe) {
 	return `<section class="recipes">
                 <img class="image" src="${image}" alt="Image of the corresponding meal">
                 <div class="recipe-data">
-                    <div class="tags">
-                        <p class="tag">dessert</p> 
-                    </div>
+                    <ul class="tags">
+                        <li class="tag">dessert</li>
+                    </ul>
                     <h2 class="name">${name}</h2>
                     <span
                     class="rating"
@@ -66,4 +62,12 @@ function stringToHTML(htmlString) {
 	const hrRef = document.querySelector("hr");
 
 	hrRef.insertAdjacentHTML("afterEnd", htmlString);
+};
+
+function tagsTemplate(tags) {
+    
+};
+
+function ratingTemplate(rating) {
+
 };

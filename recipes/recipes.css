@@ -19,7 +19,7 @@ h1, h2 {
     font-family: var(--secondary-font);
 }
 
-p, form {
+p, form, .tags {
     font-family: var(--primary-font);
 }
 
@@ -93,6 +93,11 @@ hr {
 
 .image {
     margin-bottom: 3px;
+}
+
+.tags {
+    list-style-type: none;
+    padding-left: 0px;
 }
 
 .tag {
