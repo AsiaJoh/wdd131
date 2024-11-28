@@ -1,7 +1,5 @@
 import recipes from "./recipes.mjs";
 
-console.log("Is this even working????");
-
 let randomNumber = randomNum();
 let chosenRecipeObject = randomRecipe(randomNumber);
 let recipeString = recipeTemplate(chosenRecipeObject);
@@ -69,14 +67,3 @@ function stringToHTML(htmlString) {
 
 	hrRef.insertAdjacentHTML("afterEnd", htmlString);
 };
-
-recipes.forEach((recipe) => {
-	// Call a bunch of functions needed to create the blog
-
-	// Function to transform/put the data into that special string
-	let htmlString = toString(recipe);
-
-	// Function to change that special string into legitimate code for the html
-	stringToHTML(htmlString);
-
-});
