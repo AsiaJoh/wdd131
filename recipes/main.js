@@ -37,7 +37,7 @@ function recipeTemplate(recipe) {
                 <img class="image" src="${image}" alt="Image of the corresponding meal">
                 <div class="recipe-data">
                     <ul class="tags">
-                        <li class="tag">dessert</li>
+                        ${tagsTemplate()}
                     </ul>
                     <h2 class="name">${name}</h2>
                     <span
@@ -65,9 +65,35 @@ function stringToHTML(htmlString) {
 };
 
 function tagsTemplate(tags) {
-    
+    // loop through the tags list and transform the strings to HTML
+
+    tags.forEach((tag) => {
+        // Give the tag a string variation
+        let tagString = `<li class="tag">${tag}</li>`;
+
+        // Give the html to the string that'll be sent to the document
+        return tagString;
+    });
+
+	return html;
 };
 
 function ratingTemplate(rating) {
+	// begin building an html string using the ratings HTML written earlier as a model.
+	let html = `<span
+	class="rating"
+	role="img"
+	aria-label="Rating: ${rating} out of 5 stars"
+>`
+// our ratings are always out of 5, so create a for loop from 1 to 5
 
+		// check to see if the current index of the loop is less than our rating
+		// if so then output a filled star
+
+		// else output an empty star
+
+	// after the loop, add the closing tag to our string
+	html += `</span>`
+	// return the html string
+	return html
 };
