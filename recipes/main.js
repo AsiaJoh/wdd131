@@ -1,5 +1,7 @@
 import recipes from "./recipes.mjs";
 
+console.log("Is this even working????");
+
 let randomNumber = randomNum();
 let chosenRecipeObject = randomRecipe(randomNumber);
 let recipeString = recipeTemplate(chosenRecipeObject);
