@@ -77,5 +77,4 @@ recipes.forEach((recipe) => {
 	// Function to change that special string into legitimate code for the html
 	stringToHTML(htmlString);
 
-
 });
