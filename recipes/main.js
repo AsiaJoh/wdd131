@@ -7,7 +7,8 @@ const searchButton = document.querySelector("#search-icon");
 searchButton.addEventListener("click", searchFunction());
 
 function searchFunction () {
-    //Get the search input and convert it all to lowercase.
+    // Get the search input and convert it all to lowercase.
+    
     // Pass the query string into a filterRecipes(query) function.
 }
 
