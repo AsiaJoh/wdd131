@@ -1,9 +1,13 @@
 import recipes from "./recipes.mjs";
 
+
+
 let randomNumber = randomNum();
 let chosenRecipeObject = randomRecipe(randomNumber);
 let recipeString = recipeTemplate(chosenRecipeObject);
 stringToHTML(recipeString);
+
+renderRecipes(recipes);
 
 function randomNum () {
     // "Math.random() generates a random number between 0 (inclusive) and 1 (exclusive).
@@ -17,6 +21,34 @@ function randomRecipe(num) {
     let recipeObject = recipes[num];
     return recipeObject;
 }
+
+function stringToHTML(htmlString) {
+	// Take the received html, and insert it into the document
+
+	const hrRef = document.querySelector("hr");
+
+	hrRef.insertAdjacentHTML("afterEnd", htmlString);
+};
+
+function renderRecipes(recipeList) {
+	// get the element we will output the recipes into
+    const recipeContainer = document.querySelector(".recipes");
+
+    let htmlStrings = ``;
+
+	// use the recipeTemplate function to transform our recipe objects into recipe HTML strings
+    recipeList.forEach((recipe) => {
+        // For each recipe object in the list...
+        //Make it an html string
+        let recipeHTML = recipeTemplate(recipe);
+        htmlStrings += recipeHTML;
+    });
+	// Set the HTML strings as the innerHTML of our output element.
+    recipeContainer.innerHTML = htmlStrings;
+
+}
+
+
 
 function recipeTemplate(recipe) {
     const author = recipe["author"];
@@ -33,7 +65,7 @@ function recipeTemplate(recipe) {
     const recipeYield = recipe["recipeYield"];
     const rating = recipe["rating"]; // <-- Deal with this later
 
-	return `<section class="recipes">
+	return `<section class="recipe">
                 <img class="image" src="${image}" alt="Image of the corresponding meal">
                 <div class="recipe-data">
                     <ul class="tags">
@@ -45,14 +77,6 @@ function recipeTemplate(recipe) {
                 </div>
             </section>`;
 }
-
-function stringToHTML(htmlString) {
-	// Take the received html, and insert it into the document
-
-	const hrRef = document.querySelector("hr");
-
-	hrRef.insertAdjacentHTML("afterEnd", htmlString);
-};
 
 function tagsTemplate(tags) {
     // loop through the tags list and transform the strings to HTML

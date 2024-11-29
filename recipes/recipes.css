@@ -81,7 +81,7 @@ hr {
     border-color: var(--text-light);
 }
 
-.recipes{
+.recipe{
     margin: 20px;
     border-style: solid;
     border-radius: 10px;
@@ -147,7 +147,7 @@ footer img {
 
     }
 
-    .recipes {
+    .recipe {
         margin: 20px;
         border-style: solid;
         border-radius: 10px;
