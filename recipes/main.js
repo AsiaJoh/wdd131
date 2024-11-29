@@ -1,34 +1,18 @@
 import recipes from "./recipes.mjs";
 
 
+init();
 
-let randomNumber = randomNum();
-let chosenRecipeObject = randomRecipe(randomNumber);
-let recipeString = recipeTemplate(chosenRecipeObject);
-stringToHTML(recipeString);
 
-renderRecipes(recipes);
-
-function randomNum () {
+function GetRandomRecipe() {
     // "Math.random() generates a random number between 0 (inclusive) and 1 (exclusive).
     // We multiply to scale
     let num = Math.floor(Math.random() * 8);
-    return num;
-};
 
-function randomRecipe(num) {
     // Use the imported recipes, and the random function from above to return a random recipe.
     let recipeObject = recipes[num];
     return recipeObject;
 }
-
-function stringToHTML(htmlString) {
-	// Take the received html, and insert it into the document
-
-	const hrRef = document.querySelector("hr");
-
-	hrRef.insertAdjacentHTML("afterEnd", htmlString);
-};
 
 function renderRecipes(recipeList) {
 	// get the element we will output the recipes into
@@ -48,7 +32,13 @@ function renderRecipes(recipeList) {
 
 }
 
+function init() {
+    // get a random recipe
+    const recipeObject = GetRandomRecipe();
 
+    // render the recipe with renderRecipes.
+    renderRecipes([recipeObject]);
+  }
 
 function recipeTemplate(recipe) {
     const author = recipe["author"];
