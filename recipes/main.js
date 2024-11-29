@@ -37,14 +37,9 @@ function recipeTemplate(recipe) {
                 <img class="image" src="${image}" alt="Image of the corresponding meal">
                 <div class="recipe-data">
                     <ul class="tags">
-                        ${tagsTemplate()}
+                        ${tagsTemplate(tags)}
                     </ul>
                     <h2 class="name">${name}</h2>
-                    <span
-                    class="rating"
-                    role="img"
-                    aria-label="Rating: ${rating}"
-                    >
                         ${ratingTemplate(rating)}
                     <p class="description">${description}</p>
                 </div>
@@ -61,15 +56,20 @@ function stringToHTML(htmlString) {
 
 function tagsTemplate(tags) {
     // loop through the tags list and transform the strings to HTML
+    
+
+    //Set up the future string
+    let html = ``;
 
     tags.forEach((tag) => {
         // Give the tag a string variation
         let tagString = `<li class="tag">${tag}</li>`;
 
         // Give the html to the string that'll be sent to the document
-        return tagString;
+        html += tagString
     });
 
+    console.log(html);
 	return html;
 };
 
@@ -83,12 +83,12 @@ function ratingTemplate(rating) {
     // our ratings are always out of 5, so create a for loop from 1 to 5
     for(let i = 1; i<=5; i++) {
         // check to see if the current index of the loop is less than our rating
-		if (i < rating) {
+		if (i <= rating) {
             // if so then output a filled star
-            html + `<span aria-hidden="true" class="icon-star">⭐</span>`;
+            html += `<span aria-hidden="true" class="icon-star">⭐</span>`;
         }else {
             // else output an empty star
-            html + `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+            html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
         }
     };
 	// after the loop, add the closing tag to our string

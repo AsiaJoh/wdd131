@@ -101,10 +101,10 @@ hr {
 }
 
 .tag {
-    margin-top: 0px;
+    margin-top: 2px;
     border-style: solid;
     border-color: var(--text-dark);
-    max-width: 60px;
+    max-width: 80px;
     text-align: center;
     padding: 5px 5px;
     color: var(--text-dark);
@@ -173,7 +173,7 @@ footer img {
         margin-top: 5px;
         border-style: solid;
         border-color: var(--text-dark);
-        max-width: 60px;
+        max-width: 80px;
         text-align: center;
         padding: 5px 5px;
         color: var(--text-dark);
