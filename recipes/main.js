@@ -3,6 +3,14 @@ import recipes from "./recipes.mjs";
 
 init();
 
+const searchButton = document.querySelector("#search-icon");
+searchButton.addEventListener("click", searchFunction());
+
+function searchFunction () {
+    //Get the search input and convert it all to lowercase.
+    // Pass the query string into a filterRecipes(query) function.
+}
+
 
 function GetRandomRecipe() {
     // "Math.random() generates a random number between 0 (inclusive) and 1 (exclusive).
@@ -46,14 +54,14 @@ function recipeTemplate(recipe) {
     const isBasedOn = recipe["isBasedOn"];
     const cookTime = recipe["cookTime"];
     const datePublished = recipe["datePublished"];
-    const tags = recipe["tags"]; // <-- Deal with this later
+    const tags = recipe["tags"]; 
     const description = recipe["description"];
     const image = recipe["image"];
     const name = recipe["name"];
     const prepTime = recipe["prepTime"];
     const recipeInstructions = recipe["recipeInstructions"];
     const recipeYield = recipe["recipeYield"];
-    const rating = recipe["rating"]; // <-- Deal with this later
+    const rating = recipe["rating"]; 
 
 	return `<section class="recipe">
                 <img class="image" src="${image}" alt="Image of the corresponding meal">
