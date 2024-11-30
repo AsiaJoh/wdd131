@@ -5,13 +5,15 @@ init();
 
 const searchBar = document.querySelector("#search");
 const searchButton = document.querySelector("#search-icon");
-searchButton.addEventListener("click", searchHandler(e));
+
+// "You need to pass the function reference without invoking it. The browser will automatically pass the event object to the function when the event occurs.""
+searchButton.addEventListener("click", searchHandler);
 
 function filterRecipes() {
 	const filtered = recipes.filter(filterFunction) // Filter function must return True to include the recipe in the new list, False to exclude it
 	// sort by name
-	const sorted = filtered.sort(sortFunction)
-		return sorted
+	const sorted = filtered.sort() //sortFunction)
+	return sorted
 }
 
 function searchHandler(e) {
@@ -25,13 +27,13 @@ function searchHandler(e) {
     console.log("Prefiltered Recipe List");
     console.log(recipes);
 
-    filterRecipes();
+    const filtered = filterRecipes();
 
     console.log("Filtered Recipe List");
-    console.log(recipes);
+    console.log(filtered);
 
     // render the filtered list
-    renderRecipes([recipes]);
+    renderRecipes([filtered]);
 }
 
 function filterFunction(recipe) {
@@ -50,6 +52,10 @@ function filterFunction(recipe) {
     recipe.recipeIngredient.includes(queryLower)) {
         return true;
     }
+}
+
+function sortFunction(recipe) {
+    // Sort the filtered recipe 
 }
 
 function GetRandomRecipe() {
