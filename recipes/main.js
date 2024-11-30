@@ -3,15 +3,54 @@ import recipes from "./recipes.mjs";
 
 init();
 
+const searchBar = document.querySelector("#search");
 const searchButton = document.querySelector("#search-icon");
-searchButton.addEventListener("click", searchFunction());
+searchButton.addEventListener("click", searchHandler(e));
 
-function searchFunction () {
-    // Get the search input and convert it all to lowercase.
-    
-    // Pass the query string into a filterRecipes(query) function.
+function filterRecipes() {
+	const filtered = recipes.filter(filterFunction) // Filter function must return True to include the recipe in the new list, False to exclude it
+	// sort by name
+	const sorted = filtered.sort(sortFunction)
+		return sorted
 }
 
+function searchHandler(e) {
+	e.preventDefault()
+    // get the search input
+    // let query = searchBar.value;
+    // convert the value in the input to lowercase
+    // let queryLower = query.toLowerCase();
+
+    // use the filter function to filter our recipes
+    console.log("Prefiltered Recipe List");
+    console.log(recipes);
+
+    filterRecipes();
+
+    console.log("Filtered Recipe List");
+    console.log(recipes);
+
+    // render the filtered list
+    renderRecipes([recipes]);
+}
+
+function filterFunction(recipe) {
+    // get the search input
+    let query = searchBar.value;
+    // convert the value in the input to lowercase
+    let queryLower = query.toLowerCase();
+
+    // check to see if the search term (query) shows up in the name, 
+    if (recipe.name.includes(queryLower) || 
+    // or the descriptions,
+    recipe.description.includes(queryLower) || 
+    // or the tag list,
+    recipe.tags.find((item) => item.includes(queryLower)) || 
+    // or the ingredients list.
+    recipe.recipeIngredient.includes(queryLower)) {
+        return true;
+    }
+}
 
 function GetRandomRecipe() {
     // "Math.random() generates a random number between 0 (inclusive) and 1 (exclusive).
