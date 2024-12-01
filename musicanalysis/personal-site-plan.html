@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+    
+  <head>
+    <meta charset="utf-8">
+    <title>Site Plan</title>
+    <link type="text/css" rel="stylesheet" href="styles/site-plan.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Music Analysis Site Plan</h1>
+      <h2>Anastasia Johansen</h2>
+      <!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 130.03 -->
+    </header>
+    <main>
+
+      <!-- ------------------------Steps 2-3------------------------------ -->
+      <hr>
+      <h2>Overview</h2>
+      <h3>Purpose</h3>
+      <p> I want to create a personal website for song analysis. I want the site to organize the song types and origins into pages, and then bring up the different songs analyzed within those sections. Through this site, I can organize my song analyses and make them available to others.</p>  <!-- change this -->
+
+
+      <h3>Audience</h3>
+      <p>Teens to adults.</p>  <!-- change this -->
+
+      <h3>Dynamic elements</h3>
+      <p>A large amount of the javascript dynamic elements can be seen in the citations page. The citations data will be held in a list of objects within a separate file. The array is imported into the main file, and then rendered out into html to be displayed on screen. The reasoning for this setup could be explained as if there were a lot more songs on the site, there’d be a lot more citations too.
+        The rest of the javascript elements could be utilized for the lyrics display page. Currently, the lyrics display in one column while my thoughts display in the other, but horizontally the lyrics and corresponding thoughts might not align. So, I’d like to set things up so that initially only the lyrics display, but you can click on lyric sections to see the thoughts corresponding to those specific lyrics.
+        I could also add a little message below the Analysis banner to let the users they need to select the lyrics to see the thoughts, and then hide this message once any lyric has been clicked at least once.</p>  <!-- change this -->
+
+      <hr>
+      <h2>Branding</h2>
+      <h3>Website Logo</h3>
+      <!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
+      <img src="images/logo.png" alt="Logo image">
+      <hr>
+      <h2>
+        Style Guide
+      </h2>
+
+      <!-- ------------------------Steps 4-8------------------------------ -->
+
+      <h3>
+        Color Palette
+      </h3>
+      <!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn. You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+      <table class="colors">
+        <tr><th>Primary</th><th>Secondary</th><th>Accent 1</th><th>Accent 2</th></tr>
+        <!-- Switch to the site-plan.css file and change your colors there. -->
+        <tr><td class="primary"></td><td class="secondary"></td><td class="accent1"></td><td class="accent2"></td></tr>
+      </table>
+
+      <!-- ------------------------Step 9------------------------------ -->
+
+      <h3>
+        Typography
+      </h3>
+      <!-- Choose a font for your paragraphs (body copy) and headlines. What font(s) have you chosen? Why did you choose what you did?  Make sure to review the list of web safe fonts at W3Schools.org as a starting point.  Think also about which of your colors above you might use for background and font colors. -->
+
+      <h4>
+        Heading Font: Roboto  <!-- change this -->
+      </h4>
+      <h4>
+        Paragraph Font: Roboto  <!-- change this -->
+      </h4>
+      <h3>
+        Normal paragraph example
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <h3>
+        Colored paragraph example
+      </h3>
+      <p class="colored">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+      </p>
+
+      <!-- ------------------------Step 10------------------------------ -->
+
+      <h3>
+        Navigation
+      </h3>
+      <!-- Think about how you want your navigation bar to look. In the site-plan.css file change the colors to your colors to get the look you desire. --> 
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Page2</a>
+        <a href="#">Page3</a>
+      </nav>
+      <hr>
+      <h2>
+        Site Map
+      </h2>
+      <div class="sitemap">
+        <div class="sm-home">
+          Home
+        </div>
+        <div class="sm-page2">
+          [Page2] <!-- change this -->
+        </div>
+        <div class="sm-page3">
+          [Page3]  <!-- change this -->
+        </div>
+
+        <div class="top">
+          &nbsp;
+        </div>
+        <div class="left">
+          &nbsp;
+        </div>
+        <div class="right">
+          &nbsp;
+        </div>
+
+      </div>
+
+      <!-- --------Content Section -------------- -->
+      <hr>
+      <h2>
+        Content
+      </h2>
+      <h3>Home page</h3>
+        <h4>About</h4>
+        <p>Have you ever listened to an awesome song, but not understood a word of it? Or have you heard the lyrics of a song, but didn’t really understand the underlying meaning? Welcome to Resonate, a little music analysis site made by yours truly. Here I pick songs and analyze them, because I want to. I discovered that analyzing song lyrics is something I’m both capable of and enjoy doing, so here we are. However, I am by no-means a professional, so please don’t take my word as law, and I may even sometimes take inspiration from other more renowned analyses/analysis sites. This is moreso just a personal project for myself, but also put online for others to potentially enjoy as well.        </p>
+        <h4>Organization</h4>
+        <p>How will this be organized? I hope to separate songs by types and origins. Video game songs will be separated from non-video game, and each of these will have their own individual sections. Songs within the former type will be separated by game, and songs in the latter will be split-up by genre. (Though I currently only have immediate plans for game songs, it’s good to prepare for the future.)</p>
+        <h4>What sorts of music will I analyze?</h4>
+        <p>Anything I’m interested in, though my current main objective is the Persona 3 Reload’s soundtrack (see details below). I am also interested in looking at some of Theophany’s Majora’s Mask tracks (they are absolutely amazing if you haven’t listened to them). Non-lyrical songs will obviously be analyzed differently, but it could still be fun. I may branch out to other popular songs too if it so strikes my fancy. (The new Epic: The Musical’s soundtrack could be fun to analyze too, though I don’t have near enough knowledge about Greek Mythology. However, my friend does…)</p>
+        <h4>What is my current project?</h4>
+        <p>More recently, I’ve taken a shine to Persona 3 Reload and its revamped soundtracks (this is what kinda sparked the whole idea, more about that below), so I may analyze those first (in context of the game). I have never actually played the game (though I do plan to), but I have learned quite a lot about it through YouTube and the internet as a whole. As I said before, please take my word with a grain of salt, as this is moreso something for personal fun as opposed to a professional’s work.</p>
+        <h4>What about songs do I intend to analyze?</h4>
+        <p>The deeper meaning of songs’ lyrics, what analogies they use or what connections they create and what those connections bring, etc. I also hope to touch on or connect to the different english tools used (like poetry tools such as metaphors or personifications), and show how those english tools used create even deeper or more elaborate meaning. With non-lyrical songs (specifically Theophany’s), I may touch more on the instruments’ or melodies’ meanings.</p>
+        <h4>How did this start?</h4>
+        <p>I actually kinda discovered my enjoyment of song or poetry analysis a long time ago. I did exceptionally well on a related school assignment, though I didn’t pursue this at the time. Much more recently I got drawn into Persona 3 Reload and its stunning music. I rambled about multiple songs and their lyrics to my friend, and talked about their neat meanings and connections to my friend. (I ended up writing multiple mini-essays in the process). She later pointed out that this could be turned into a website, and so that is what I am doing now. :)</p>
+      <p>
+      </p>
+      <p>Images for the Home page</p>
+        <img src="images/music_pages_scaled.webp" alt="pages of music overlapping">
+        <img src="images/blue-red_record_player_scaled.webp" alt="blue and red record player">
+
+      </ul>
+      <h3>Persona 3 Reload: Burn My Dread -Last Battle Reload- Analysis</h3>
+      <p>
+        [Analysis is currently unfinished, but will be put here soon!]
+      </p>
+      <p>Images for the Page 2</p>
+        <img src="images/blue_background_gun_outheld_cropped_scaled.jpg" alt="a hand holding a gun with a blue background">
+        <img src="images/cool_red_moon.webp" alt="red moon">
+
+      </ul>
+      <h3>Citations and Disclaimer</h3>
+        <h1 id="main-citation-header">Disclaimer</h1>
+        <p id="disclaimer">
+            Let it be known that this is an entirely non-profit thing being done for fun. It is not my intent to infringe upon the rights or content of anyone. I will credit songs and any external thoughts or ideas received as needed. Citations will probably be located here. 
+        </p>
+    <h2 id="citation-sub-header">Citations</h2>
+        <p class="citation">
+            Meguro, Shoji, and Shigeo Komori. "Burn My Dread." <em>Megami Tensei Wiki</em>, megamitensei.fandom.com/wiki/Burn_My_Dread#-Last_Battle_Reload-. Accessed 28 June 2024.
+        </p>
+        <p class="citation">
+            "Burn My Dread -Last Battle Reload-." <em>Genius</em>, edited by An013r et al., ML Genius Holdings, 24 Apr.2024, genius.com/Atlus-sound-team-burn-my-dread-last-battle-reload-lyrics. Accessed 28 June 2024.
+        </p>
+        <p class="citation">
+            MasterClass. "Writing 101: What Is Repetition? 7 Types of Repetition in Writing with Examples." <em>MasterClass</em>, 31 Aug. 2022, www.masterclass.com/articles/writing-101-what-is-repetition-7-types-of-repetition-in-writing-with-examples. Accessed 28 June 2024.
+        </p>
+        <p class="citation">
+            <em>Oxford English Dictionary</em>. Oxford UP, 2024, www.oed.com/search/dictionary/?scope=Entries&q=dread&tl=true. Accessed 28 June 2024.
+        </p>
+        <p class="citation">
+            “Dread.” <em>Merriam-Webster.com Dictionary</em>, Merriam-Webster, https://www.merriam-webster.com/dictionary/dread. Accessed 28 Jun. 2024.
+        </p>
+      <p>Images for the Page 3</p>
+        <img src="images/blue-red_lights_on_black.webp" alt="glowing blue and red light trails over a black background">
+        <img src="images/plant_sprout.webp" alt="plant sprouting from dirt or log">
+
+      </ul>
+      <hr>
+      <h2>
+        Wireframes
+      </h2>
+      <p>
+        Create three wireframes for your site. One for each page and list them here</p>
+
+      <h3>Home</h3>
+      <p>         
+        [Any additional details about home that the wireframe does not make clear]
+      </p>
+      <img src="images/personal-home-wireframe.png" alt="home page wireframe">
+
+      <h3>Persona 3 Reload: Burn My Dread -Last Battle Reload- Analysis</h3>
+      <p>         
+        The two columns of text hold the song lyrics on one side, and my thoughts on the other. I will put the text into the content above once it is finished, or at least further progressed.
+      </p>
+      <img src="images/personal-analysis-wireframe.png" alt="page 2 wireframe">
+
+      <h3>Citations and Disclaimer</h3>
+      <p>         
+        The series of paragraphs is the citations. Because I don't know how many citations there are yet, the number of paragraphs shown may change in the actual site.
+      </p>
+      <img src="images/personal-citations-wireframe.png" alt="page 3 wireframe">
+    </main>
+  </body>
+
+</html>
