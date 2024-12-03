@@ -33,7 +33,7 @@ function searchHandler(e) {
     console.log(filtered);
 
     // render the filtered list
-    renderRecipes([filtered]);
+    renderRecipes(filtered);
 }
 
 function filterFunction(recipe) {
