@@ -12,7 +12,7 @@ searchButton.addEventListener("click", searchHandler);
 function filterRecipes() {
 	const filtered = recipes.filter(filterFunction) // Filter function must return True to include the recipe in the new list, False to exclude it
 	// sort by name
-	const sorted = filtered.sort() //sortFunction)
+	const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
 	return sorted
 }
 
@@ -43,19 +43,18 @@ function filterFunction(recipe) {
     let queryLower = query.toLowerCase();
 
     // check to see if the search term (query) shows up in the name, 
-    if (recipe.name.includes(queryLower) || 
+    return recipe.name.toLowerCase().includes(queryLower) || 
     // or the descriptions,
-    recipe.description.includes(queryLower) || 
+    recipe.description.toLowerCase().includes(queryLower) || 
     // or the tag list,
-    recipe.tags.find((item) => item.includes(queryLower)) || 
+    recipe.tags.some((item) => item.toLowerCase().includes(queryLower)) || 
     // or the ingredients list.
-    recipe.recipeIngredient.includes(queryLower)) {
-        return true;
-    }
+    recipe.recipeIngredient.some((item) => item.toLowerCase().includes(queryLower));
 }
 
 function sortFunction(recipe) {
     // Sort the filtered recipe 
+
 }
 
 function GetRandomRecipe() {
