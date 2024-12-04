@@ -18,19 +18,8 @@ function filterRecipes() {
 
 function searchHandler(e) {
 	e.preventDefault()
-    // get the search input
-    // let query = searchBar.value;
-    // convert the value in the input to lowercase
-    // let queryLower = query.toLowerCase();
-
     // use the filter function to filter our recipes
-    console.log("Prefiltered Recipe List");
-    console.log(recipes);
-
     const filtered = filterRecipes();
-
-    console.log("Filtered Recipe List");
-    console.log(filtered);
 
     // render the filtered list
     renderRecipes(filtered);
@@ -50,11 +39,6 @@ function filterFunction(recipe) {
     recipe.tags.some((item) => item.toLowerCase().includes(queryLower)) || 
     // or the ingredients list.
     recipe.recipeIngredient.some((item) => item.toLowerCase().includes(queryLower));
-}
-
-function sortFunction(recipe) {
-    // Sort the filtered recipe 
-
 }
 
 function GetRandomRecipe() {
