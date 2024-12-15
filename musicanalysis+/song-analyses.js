@@ -85,8 +85,32 @@ function lyricsTemplate(lyrics) {
 	return html;
 };
 
+// function analysisTemplate(analysis) {
+//     // loop through the analysis list and transform the strings to HTML
+
+//     //Set up the future string
+//     let html = ``;
+
+//     // Set up paragraph counter
+//     let paragraphNum = 0;
+
+//     analysis.forEach((paragraph) => {
+//         paragraphNum += 1;
+
+//         // Give the lyric a string variation
+//         let analysisString = `<p class="analysis-paragraph-${paragraphNum}">
+//                                 ${paragraph}
+//                                 </p>`;
+
+//         // Give the html to the string that'll be sent to the document
+//         html += analysisString;
+//     });
+
+// 	return html;
+// };
+
 function analysisTemplate(analysis) {
-    // loop through the lyrics list and transform the strings to HTML
+    // loop through the analysis list and transform the strings to HTML
 
     //Set up the future string
     let html = ``;
@@ -97,11 +121,22 @@ function analysisTemplate(analysis) {
     analysis.forEach((paragraph) => {
         paragraphNum += 1;
 
-        // Give the lyric a string variation
-        let analysisString = `<p class="analysis-paragraph-${paragraphNum}">
-                                ${paragraph}
-                                </p>`;
+        let paragraphString = ``;
 
+        // Process for rendering each line's html br stuff
+        paragraph.forEach((line) => {
+            // Format each line
+            let lineString = `${line}<br><br>`
+
+            // Add the line to the paragraph's string
+            paragraphString += lineString
+        })
+
+        // (Below) Add the paragraph string to the paragraph html
+        let analysisString = `<p class="analysis-paragraph-${paragraphNum}">
+                                ${paragraphString}
+                                </p>`;
+        
         // Give the html to the string that'll be sent to the document
         html += analysisString;
     });
@@ -110,7 +145,7 @@ function analysisTemplate(analysis) {
 };
 
 function citationsTemplate(citations) {
-    // loop through the lyrics list and transform the strings to HTML
+    // loop through the citations list and transform the strings to HTML
     
     //Set up the future string
     let html = ``;
