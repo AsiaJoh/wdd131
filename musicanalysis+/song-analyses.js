@@ -72,10 +72,21 @@ function lyricsTemplate(lyrics) {
 
     lyrics.forEach((paragraph) => {
         paragraphNum += 1;
-        
-        // Give the lyric a string variation
+
+        let paragraphString = ``;
+
+        // Process for rendering each line's html br stuff
+        paragraph.forEach((line) => {
+            // Format each line
+            let lineString = `${line}<br>`
+
+            // Add the line to the paragraph's string
+            paragraphString += lineString
+        })
+
+        // (Below) Add the paragraph string to the paragraph html
         let lyricString = `<p class="paragraph-${paragraphNum}">
-                            ${paragraph}
+                            ${paragraphString}
                             </p>`;
 
         // Give the html to the string that'll be sent to the document
@@ -84,30 +95,6 @@ function lyricsTemplate(lyrics) {
 
 	return html;
 };
-
-// function analysisTemplate(analysis) {
-//     // loop through the analysis list and transform the strings to HTML
-
-//     //Set up the future string
-//     let html = ``;
-
-//     // Set up paragraph counter
-//     let paragraphNum = 0;
-
-//     analysis.forEach((paragraph) => {
-//         paragraphNum += 1;
-
-//         // Give the lyric a string variation
-//         let analysisString = `<p class="analysis-paragraph-${paragraphNum}">
-//                                 ${paragraph}
-//                                 </p>`;
-
-//         // Give the html to the string that'll be sent to the document
-//         html += analysisString;
-//     });
-
-// 	return html;
-// };
 
 function analysisTemplate(analysis) {
     // loop through the analysis list and transform the strings to HTML

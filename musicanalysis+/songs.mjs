@@ -45,48 +45,68 @@ const songs = [
 
             [
                 `Tear up the fear I got it locked down`,
-                The end is coming near so burn your dread<br>`],
+                `The end is coming near so burn your dread`],
 
-            [`Burn my dread`],
+            [
+                `Burn my dread`
+            ],
 
-            [`Accepted my fate don't worry about a thing<br>
-            It's in my bag so burn your dread<br>`],
+            [
+                `Accepted my fate don't worry about a thing`,
+                `It's in my bag so burn your dread`
+            ],
 
-            [`Burn my dread`],
+            [
+                `Burn my dread`
+            ],
 
-            [`Tear up the fear I got it locked down<br>
-            The end is coming near so burn my dread<br>`],
+            [
+                `Tear up the fear I got it locked down`,
+                `The end is coming near so burn my dread`],
 
-            [`Burn my dread`],
+            [
+                `Burn my dread`
+            ],
 
-            [`Accepted my fate don't worry about a thing<br>
-            It's in my bag so burn my dread<br>`],
+            [   `Accepted my fate don't worry about a thing`,
+                `It's in my bag so burn my dread`
+            ],
 
-            [`Belittled by the situation<br>
-            Every second I was losing patience<br>
-            Couldn't execute like daily operations, who could?<br>
-            When we had such a deep relationship<br>`],
+            [
+                `Belittled by the situation`,
+                `Every second I was losing patience`,
+                `Couldn't execute like daily operations, who could?`,
+                `When we had such a deep relationship`
+                ],
 
-            [`But I chose the path, the right path for sure<br>
-            Giving my all for cure (Oh, boy)<br>
-            Prolly the toughest decision I made<br>
-            And ready for whatever outcome which I'm gonna pay<br>`],
+            [
+                `But I chose the path, the right path for sure`,
+                `Giving my all for cure (Oh, boy)`,
+                `Prolly the toughest decision I made`,
+                `And ready for whatever outcome which I'm gonna pay`
+            ],
 
-            [`I shall touch the moon one day<br>
-            And today is that day<br>
-            I'd be in despair however it's played out<br>
-            Lose-lose or win-win?<br>
-            How's it laid out? (You tell me)<br>`],
+            [
+                `I shall touch the moon one day`,
+                `And today is that day`,
+                `I'd be in despair however it's played out`,
+                `Lose-lose or win-win?`,
+                `How's it laid out? (You tell me)`
+        ],
 
-            [`Time ran out and I made up my mind<br>
-            I signed up reluctantly to this design<br>
-            I got blood all over, ashes all over<br>
-            But it's okay, game's over<br>`],
+            [
+                `Time ran out and I made up my mind`,
+                `I signed up reluctantly to this design`,
+                `I got blood all over, ashes all over`,
+                `But it's okay, game's over`
+            ],
 
-            [`Burn My Dread<br>
-            Burn My Dread<br>
-            Burn My Dread<br>
-            Burn My Dread<br>`]
+            [
+                `Burn My Dread`,
+                `Burn My Dread`,
+                `Burn My Dread`,
+                `Burn My Dread`
+            ]
         ],
 		analysis: [
             [
