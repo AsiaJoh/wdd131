@@ -120,3 +120,5 @@ const songs = [
         alt: 'red moon over black sky',
     }
 ]
+
+export default songs
