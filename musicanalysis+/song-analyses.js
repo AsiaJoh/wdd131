@@ -1,6 +1,7 @@
+// File Purpose: Render and display songs
+
 import songs from "./songs.mjs";
 
-// File Purpose: Render and display songs
 renderSongs(songs);
 
 function renderSongs(songList) {
