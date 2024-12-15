@@ -64,8 +64,9 @@ body {
     width: 100%;
 }
 
-main {
+#song-section {
     padding: 5%;
+    background-color:  #500759; 
 }
 
 .mid {
@@ -108,14 +109,51 @@ footer .social img {
 
 /* CSS For Subpage 1  */
 
+/* Now with some new revisions for a new variation for a new class' final! */
+.song {
+    margin: 40px;
+    border: solid;
+    border-color: #F2B66D;
+    border-radius: 10px;
+    background-color:  #500759;
+}
+
+.song #hero-box {
+    background-color:  #500759;
+}
+
+.song #hero-img {
+    border-radius: 10px;
+}
+
+.song #citation-section {
+    background-color:  #500759; 
+}
+
+#analysis-body {
+    background-color: #8C3A7E;
+}
+
+.song #hero-box {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: 0;
+    border-color: #F2B66D;
+    border-radius: 10px;
+}
+
 #hero-msg {
     grid-column: 1/2;
     grid-row: 1/2;
     margin-top: 50px;
+    text-align: center;
+    z-index: 1;
 }
 
-#hero-msg {
-    text-align: center;
+.song #hero-img {
+    /* Why isn't this adding a border to the bottom of the image? */
+    border-color: #F2B66D;
+    border-radius: 10px;
 }
 
 .home-title {
@@ -124,14 +162,14 @@ footer .social img {
     color: #F2B66D
 }
 
-#reminder {
+/* #reminder {
     display: flex;
     justify-content: space-around;
 }
 
 #reminder p {
     padding: 50px;
-}
+} */
 
 #analysis {
     display: grid;
@@ -160,6 +198,17 @@ footer .social img {
 .paragraph-19 {
     grid-row: 2/3;
 }
+
+.future-notice {
+    margin-top: 70px;
+    display: flex;
+    justify-self: center;
+}
+
+
+
+
+
 
 /* CSS For Subpage 2  */
 
