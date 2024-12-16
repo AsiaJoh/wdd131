@@ -69,6 +69,69 @@ body {
     background-color:  #500759; 
 }
 
+/* CSS For Form */
+/* form-demo.css */
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #F2B66D;
+    color: #500759;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    border-color: #8C3A7E;
+    cursor: pointer;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+input, textarea {
+    border: 2px #F2B66D;
+    background-color: #8C3A7E;
+    color: #F2B66D;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+.errors > p {
+    border: 1px solid #F2B66D;
+    padding: 0.5em;
+}
+
+#home {
+    margin: 30px;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+/* .home-column-2 {
+    border: solid;
+    border-radius: 10px;
+    padding: 10px;
+} */
+
+.home-column-1, .home-column-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+
 .mid {
     width: 400px;
     /* margin-left: auto; */
@@ -161,15 +224,6 @@ footer .social img {
     font-size: 3em;
     color: #F2B66D
 }
-
-/* #reminder {
-    display: flex;
-    justify-content: space-around;
-}
-
-#reminder p {
-    padding: 50px;
-} */
 
 #analysis {
     display: grid;
