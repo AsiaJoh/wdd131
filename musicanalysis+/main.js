@@ -14,7 +14,7 @@ function validateForm(event) {
         isValid = false;
         errors.push("I already looked at that song :)");
       }
-    }
+
     if (theForm.songArtist.value === "Anastasia Johansen") { // A bit of a silly test case to use more if-statements, but it is true I haven't written any music
       isValid = false;
       errors.push("I'm afraid I haven't written any songs.");
@@ -28,15 +28,16 @@ function validateForm(event) {
       // return false to let the browser know the form was not submitted.
       return false;
     }
+}
   
-  // helper function to display our errors.
-  function showErrors(errors) {
+// helper function to display our errors.
+function showErrors(errors) {
     const errorEl = document.querySelector(".errors");
     const html = errors.map((error) => `<p>${error}</p>`);
     errorEl.innerHTML = html.join("");
-  }
+}
 
-  // attach a submit event handler to the form
-  document
+// attach a submit event handler to the form
+document
     .querySelector("#requestForm")
     .addEventListener("submit", validateForm);
