@@ -148,7 +148,7 @@ const songs = [
 
             `“Dread.” <em>Merriam-Webster.com Dictionary</em>, Merriam-Webster, https://www.merriam-webster.com/dictionary/dread. Accessed 28 Jun. 2024.`
         ],
-        src: 'images/cool_red_moon.webp',
+        src: 'images/cool_red_moon_adjusted.webp',
         alt: 'red moon over black sky',
     }
 ]

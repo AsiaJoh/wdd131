@@ -40,6 +40,7 @@ nav a:hover {
 
 body {
     background-color:  #500759; 
+    font-display: swap;
     font-family: "Roboto", Helvetica, sans-serif;
     font-size: 22px;
     color: #F2B66D;
@@ -91,14 +92,15 @@ button {
     border-radius: 4px;
     border-color: #8C3A7E;
     cursor: pointer;
+    font-display: swap;
     font-family: "Roboto", Helvetica, sans-serif;
     font-size: 1em;
 }
 
 input, textarea {
-    border: 2px #F2B66D;
-    background-color: #8C3A7E;
-    color: #F2B66D;
+    border: 2px #8C3A7E;
+    background-color: #D97E6A;
+    color: #500759;
     border-radius: 3px;
     font-size: 1em;
 }
@@ -129,6 +131,10 @@ input, textarea {
     border-radius: 10px;
     padding: 10px;
 } */
+
+.home-column-1 p{
+    margin-top: -5px;
+}
 
 .home-column-1, .home-column-2 {
     flex: 1;
